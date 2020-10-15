@@ -1,0 +1,76 @@
+body{
+    background-color: whitesmoke;
+}
+.content{
+    width: 50%;
+    margin: 5% auto;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    background-color: white;
+}
+.content h1{
+    text-align: center;
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    /* padding: 10px; */
+}
+.row{
+    margin: 10px auto;
+    padding: 5px;
+}
+.row span{
+    display: inline-block;
+    text-align: left;
+    width: 15%;
+    margin-left: 25%;
+    font-weight: 100;
+}
+.row input[type=text]{
+    padding: 3px 10px;
+}
+.row input[type=submit]{
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 1px solid rosybrown;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.row input[type=submit]:hover{
+    background-color: grey;
+}
+/* .row p{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+
+} */
+.result{
+    margin: 0px auto;
+    width: 75%;
+}
+.result img{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    float: left;
+    overflow: hidden;
+    margin: 0px auto;
+}
+.result p{
+    text-align: justify;
+    line-height: 100px;
+    margin-left: 25%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.result p span{
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 18px;
+}
+.result h4{
+    text-align: center;
+    color: red;
+    padding: 3px;
+}
