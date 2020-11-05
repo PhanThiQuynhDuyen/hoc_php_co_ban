@@ -1,0 +1,61 @@
+.content{
+    width: 40%;
+    margin: 5% auto;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    background-color: #FFFFF0;
+}
+.header{
+    width: 97%;
+    height:150px;
+    margin: 10px auto;
+    
+}
+.left {
+    float: left;
+    width: 35%;
+}
+.left img{
+    height: 150px;
+    width: 150px;
+    border-radius: 2%;
+}
+.right {
+    float: left;
+    width: 65%;
+    
+}
+.right h2{
+    text-align: center;
+    color: brown;
+}
+.row input[type=text]{
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid rosybrown;
+    height: 20px;
+    width: 60%;
+    
+}
+.row input[type=submit]{
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid rosybrown;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 10px;
+    height: 30px;
+    width: 30%;
+}
+.main{
+    width: 97%;
+    margin: 10px auto;
+}
+.main table tr th{
+    text-align: left;
+}
+.row h2{
+    text-align: right;
+    color: chocolate;
+    padding-bottom: 5%;
+}
