@@ -11,6 +11,9 @@
         $n=6;
         $flat = true;
         $result = "";
+        $checked1="checked";
+        $checked2="";
+        $checked3="";
         if (isset($_GET["loop"])) {
             # code...
             $url = $_SERVER["REQUEST_URI"];
@@ -42,36 +45,38 @@
                                     $result .= $space . $character.'<br />';
                                 }
                             }
-
-                            //Vòng lặp while
-                            case "while":
-                                if ($type == "type1") {
-                                    $i = 1;
-                                    while ($i <= $n){
-                                        $result.= str_repeat("*", $i) . "<br />";
-                                        $i++;
-                                    }
+                        break;
+                        //Vòng lặp while
+                        case "while":
+                            $checked2="checked";
+                            if ($type == "type1") {
+                                $i = 1;
+                                while ($i <= $n){
+                                    $result.= str_repeat("*", $i) . "<br />";
+                                    $i++;
                                 }
-                                if ($type == "type2") {
-                                    $i=$n;
-                                    while ($i >= 1){
-                                        $result.= str_repeat("*", $i) . "<br />";
-                                        $i--;
-                                    }
+                            }
+                            if ($type == "type2") {
+                                $i=$n;
+                                while ($i >= 1){
+                                    $result.= str_repeat("*", $i) . "<br />";
+                                    $i--;
                                 }
-                                if ($type =="type3") {
-                                    $i=1;
-                                    while ($i <= $n){
-                                        $space = str_repeat("&nbsp;&nbsp;", $n - $i);
-                                        $character = str_repeat("*", 2*$i-1); 
-                                        $result .= $space . $character.'<br />';
-                                        $i++;
-                                    }
+                            }
+                            if ($type =="type3") {
+                                $i=1;
+                                while ($i <= $n){
+                                    $space = str_repeat("&nbsp;&nbsp;", $n - $i);
+                                    $character = str_repeat("*", 2*$i-1); 
+                                    $result .= $space . $character.'<br />';
+                                    $i++;
                                 }
-                                break;
+                            }
+                            break;
 
                             //Vòng lặp do..while
                             case "do..while":
+                                $checked3="checked";
                                 if ($type == "type1") {
                                     $i = 1;
                                     do {
@@ -113,15 +118,15 @@
         <form method="get" action="">
             <h5>Chọn vòng lặp:</h5>
             <div class="row">
-                <input type="radio" id="1" name="loop" value="for" checked>
+                <input type="radio" id="1" name="loop" value="for" <?php echo $checked1;?>>
                 <label for="1">for</label>
             </div>
             <div class="row">
-                <input type="radio" id="2" name="loop" value="while">
+                <input type="radio" id="2" name="loop" value="while" <?php echo $checked2;?>>
                 <label for="2">while</label>
             </div>
             <div class="row">
-                <input type="radio" id="3" name="loop" value="do..while">
+                <input type="radio" id="3" name="loop" value="do..while" <?php echo $checked3;?>>
                 <label for="3">do..while</label>
             </div>
             <div class="row" style="margin-top: 10px;">

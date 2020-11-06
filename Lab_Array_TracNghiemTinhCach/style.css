@@ -1,0 +1,22 @@
+.content{
+    width: 60%;
+    margin: 5% auto;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    background-color: #FFFFF0;
+}
+.main{
+    width: 95%;
+    margin: 0px auto;
+}
+.main h2{
+    text-align: center;
+    color: crimson;
+}
+.main span{
+    font-weight: bold;
+}
+.main ul li{
+    list-style-type: none;
+    margin-left: -3%;
+}
