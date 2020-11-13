@@ -7,54 +7,44 @@
     <link type="text/css" rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <?php 
+        require_once "funtion_a.php";
+        require_once "funtion_b.php";
+        $arr = array();
+        foreach ($arrQuestion as $key => $value){
+            $arr[$key]["question"] = $value["question"];
+            $arr[$key]["sentences"] = $arrOptions[$key];
+        }
+        // echo "<pre>";
+        // print_r($arr);
+        // echo "</pre>";
+    ?>
     <div class="content">
         <div class="main">
             <h2>Trắc nghiệm tính cách</h2>
-            <form action="post">
+            <form action="result.php" method="post" name="mainForm">
+                <?php 
+                    $i = 1;
+                    foreach($arr as $key => $value){
+                        echo '<div class="row">';
+                        echo '<p>
+                                <span>Câu hỏi '.$i.': </span>'.$value["question"].'
+                            </p>';
+                        echo'<ul>';
+                        foreach ($value["sentences"] as $keyC => $valueC){
+                            echo '<li>
+                                     <label for="">
+                                        <input type="radio" name="'.$key.'" value="'.$valueC["point"].'">'.$valueC["option"].'
+                                    </label>
+                                </li>';
+                        }
+                        echo' </ul>';
+                        echo' </div>';
+                        $i++;
+                    }
+                ?>
                 <div class="row">
-                    <p>
-                        <span>Câu hỏi 1: </span>Bạn cảm thấy dễ chịu nhất khi nào
-                    </p>
-                    <ul>
-                        <li>
-                            <label for="">
-                                <input type="radio" name="1" value="2">Vào buổi sáng
-                            </label>
-                        </li>
-                        <li>
-                            <label for="">
-                                <input type="radio" name="1" value="4">Vào buổi chiều và chớm tối
-                            </label>
-                        </li>
-                        <li>
-                            <label for="">
-                                <input type="radio" name="1" value="6">Vào đêm muộn
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="row">
-                    <p>
-                        <span>Câu hỏi 1: </span>Bạn cảm thấy dễ chịu nhất khi nào
-                    </p>
-                    <ul>
-                        <li>
-                            <label for="">
-                                <input type="radio" name="1" value="2">Vào buổi sáng
-                            </label>
-                        </li>
-                        <li>
-                            <label for="">
-                                <input type="radio" name="1" value="4">Vào buổi chiều và chớm tối
-                            </label>
-                        </li>
-                        <li>
-                            <label for="">
-                                <input type="radio" name="1" value="6">Vào đêm muộn
-                            </label>
-                        </li>
-                    </ul>
+                    <input type="submit" name="submit" value="Xem kết quả">
                 </div>
             </form>
         </div>

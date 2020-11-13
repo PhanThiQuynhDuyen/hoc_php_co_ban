@@ -20,3 +20,20 @@
     list-style-type: none;
     margin-left: -3%;
 }
+.row input[type=submit]{
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid rosybrown;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 10px;
+    height: 30px;
+    width: 15%;
+    background-color: brown;
+    color: #FFFFF0;
+    margin-bottom: 3%;
+}
+.row input[type=submit]:hover{
+    color: #FFFFF0;
+    background-color: forestgreen;
+}
